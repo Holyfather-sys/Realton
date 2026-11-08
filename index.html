@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101727">
+  <title>Realton | Telegram Mini App</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div class="brand"><span class="coin">R</span><div><strong>realton</strong><small>rewards mini app</small></div></div><div class="live"><i></i> DEMO</div></header>
+    <section class="welcome"><p class="eyebrow">YOUR REWARDS SPACE</p><h1>Hey, <span id="name">friend</span> 👋</h1><p class="muted">Collect demo points. No token or TON is being issued.</p></section>
+    <section class="balance-card"><div class="card-top"><span>POINTS BALANCE</span><span class="spark">✦</span></div><div class="amount"><span id="points">0</span><small>pts</small></div><div class="card-bottom"><span>Demo ledger balance</span><span id="sync">● connected</span></div></section>
+    <section class="earn-card"><div class="section-heading"><div><p class="eyebrow">DAILY ACTION</p><h2>Earn a point</h2></div><div class="earn-icon">＋</div></div><p class="muted">Tap below to add 1 demo point. A short cooldown keeps the ledger fair.</p><button id="claim" class="primary">Claim 1 point <span>→</span></button><p id="claim-note" class="micro">Available now</p></section>
+    <section class="withdraw-card"><div><p class="eyebrow">TON WALLET</p><h2>Withdrawal requests</h2></div><p class="muted">Requests are recorded for review only. Nothing is transferred.</p><form id="withdraw-form"><label for="wallet">Your TON wallet address</label><input id="wallet" autocomplete="off" placeholder="EQ... or UQ..." maxlength="68" required><div class="form-row"><div><label for="amount">Points to request</label><input id="amount" type="number" min="1" step="1" placeholder="100" required></div><button class="secondary" type="submit">Request</button></div><p id="withdraw-note" class="micro"></p></form><div id="requests" class="requests"></div></section>
+    <footer><span>REALTON · DEMO ONLY</span><span>No Jetton · No payouts</span></footer>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
